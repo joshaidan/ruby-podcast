@@ -118,7 +118,7 @@ module Podcast
       @file = f
       @artist = tag['artist']
       @album = tag['album']
-      @title = tag['title']
+      @title = tag['title'] ? tag['title'] : "Untitled"
       @path = file.path()
       @length = file.stat.size()
       @mtime = file.stat.mtime()
